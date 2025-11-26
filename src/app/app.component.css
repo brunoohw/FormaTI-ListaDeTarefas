@@ -1,0 +1,20 @@
+/* Borda colorida à esquerda dos cards para dar destaque */
+.border-left-primary {
+    border-left: 5px solid #007bff;
+}
+
+/* Espaçamento extra no container */
+.container {
+    padding-bottom: 50px;
+}
+
+/* Deixar o input de filtro um pouco maior */
+select.form-control {
+    cursor: pointer;
+}
+
+/* Efeito hover suave na lista */
+.list-group-item:hover {
+    background-color: #f8f9fa;
+    transition: 0.3s;
+}

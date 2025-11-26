@@ -1,19 +1,23 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; 
+import { HttpClientModule } from '@angular/common/http'; 
 
-import { App } from './app';
+// REMOVI A LINHA: import { AppRoutingModule } ... porque o arquivo não existe
+
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    App
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    // REMOVI A LINHA: AppRoutingModule,
+    FormsModule,     
+    HttpClientModule 
   ],
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideClientHydration(withEventReplay())
-  ],
-  bootstrap: [App]
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
